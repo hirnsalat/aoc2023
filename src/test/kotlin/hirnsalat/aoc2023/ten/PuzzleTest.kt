@@ -16,6 +16,11 @@ private const val zeroInsideButWeird = "........\n" +
         ".|F--7|.\n" +
         ".LJ..LJ.\n" +
         "........\n"
+private const val startIsAProblem = "........\n" +
+        ".F----7.\n" +
+        ".S....|.\n" +
+        ".L----J.\n" +
+        "........\n"
 
 class PuzzleTest {
     @Test
@@ -49,6 +54,13 @@ class PuzzleTest {
     }
 
     @Test
+    fun testBonus3() {
+        val p = Puzzle(startIsAProblem)
+
+        assertEquals(4, p.bonus())
+    }
+
+    @Test
     fun testCharAt() {
         val p = Puzzle(smallInput)
 
@@ -67,6 +79,6 @@ class PuzzleTest {
     fun testConnections() {
         val p = Puzzle(smallInput)
 
-        assertEquals(setOf(Coordinates(2,1),Coordinates(1,2)), p.incomingConnections(Coordinates(1,1)))
+        assertEquals(listOf(Coordinates(2,1),Coordinates(1,2)), p.incomingConnections(Coordinates(1,1)))
     }
 }

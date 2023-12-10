@@ -5,19 +5,12 @@ data class Coordinates(val x : Int, val y : Int) {
     fun right() = Coordinates(x+1, y)
     fun up() = Coordinates(x, y-1)
     fun down() = Coordinates(x, y+1)
-}
 
-fun verticalEdges(c : Char?) =
-    when(c) {
-        // going up
-        'F' -> -1
-        'J' -> -1
-        // going down
-        'L' -> 1
-        '7' -> 1
-        '|' -> 2
-        else -> 0
-    }
+    operator fun plus(other : Coordinates) =
+        Coordinates(x + other.x, y + other.y)
+    operator fun minus(other : Coordinates) =
+        Coordinates(x - other.x, y - other.y)
+}
 
 class Puzzle (input : String) {
     val input = input.lines()
@@ -35,7 +28,7 @@ class Puzzle (input : String) {
 
     fun bonus() : Int {
         val loop = getLoop()
-        val lines = loop.map { it.y }.toSet()
+        val lines = loop.map { it.y }.distinct()
         var insideTiles = 0
 
         for(line in lines) {
@@ -53,7 +46,11 @@ class Puzzle (input : String) {
                     insideTiles += length
                 }
 
-                verticalEdges += verticalEdges(charAt(loopTile))
+                val connections =
+                    if(charAt(loopTile) == 'S') incomingConnections(loopTile).sortedBy { it.x }
+                        else outgoingConnections(loopTile).sortedBy { it.x }
+                verticalEdges += (connections[0] - connections[1]).y
+
                 lastEdge = loopTile.x
             }
         }
@@ -69,24 +66,23 @@ class Puzzle (input : String) {
         }
     }
 
-    fun getLoop() : Set<Coordinates> {
-        val ret = mutableSetOf<Coordinates>()
+    fun getLoop() : List<Coordinates> {
+        val ret = mutableListOf<Coordinates>()
         var prev = findStart() // coordinates of S!
         var current = prev // also S
-        var next = incomingConnections(current).toSet() // neighbors of S
+        var next = incomingConnections(current).first() // a neighbor of S
 
         ret += prev
 
-        while(next.isNotEmpty()) {
+        while(charAt(next) != 'S') {
             // advance current to next tile
-            current = next.first()
+            current = next
             // get connections for tile, but exclude the direction we came from
-            next = incomingConnections(current)
-                .filter { it != prev }
-                .intersect(outgoingConnections(current))
+            next = outgoingConnections(current)
+                .first { it != prev }
             // remember position for next step
             prev = current
-
+            // collect the loop
             ret += prev
         }
 
@@ -118,39 +114,22 @@ class Puzzle (input : String) {
         throw RuntimeException("Malformed puzzle input!")
     }
 
-    fun outgoingConnections(coords: Coordinates) : Set<Coordinates> {
+    fun outgoingConnections(coords: Coordinates) : List<Coordinates> {
         val char = charAt(coords)
 
         return when (char) {
-            'F' -> setOf(coords.right(), coords.down())
-            'J' -> setOf(coords.left(), coords.up())
-            '7' -> setOf(coords.left(), coords.down())
-            'L' -> setOf(coords.right(), coords.up())
-            '-' -> setOf(coords.right(), coords.left())
-            '|' -> setOf(coords.up(), coords.down())
-            else -> setOf()
+            'F' -> listOf(coords.down(), coords.right())
+            'J' -> listOf(coords.left(), coords.up())
+            '7' -> listOf(coords.left(), coords.down())
+            'L' -> listOf(coords.up(), coords.right())
+            '-' -> listOf(coords.left(), coords.right())
+            '|' -> listOf(coords.up(), coords.down())
+            else -> listOf()
         }
     }
 
-    fun incomingConnections(coords : Coordinates) : Set<Coordinates> {
-        var ret = setOf<Coordinates>()
-
-        fun testAndAdd(coords : Coordinates, allowedChars : List<Char>) {
-            if (allowedChars.contains(charAt(coords))) {
-                ret = ret.plus(coords)
-            }
-        }
-
-        //left
-        testAndAdd(coords.left(), listOf('-', 'F', 'L'))
-        //up
-        testAndAdd(coords.up(), listOf('|', '7', 'F'))
-        //right
-        testAndAdd(coords.right(), listOf('-', '7', 'J'))
-        //down
-        testAndAdd(coords.down(), listOf('|', 'L', 'J'))
-
-        return ret
-    }
+    fun incomingConnections(coords : Coordinates) =
+        listOf(coords.left(), coords.right(), coords.down(), coords.up())
+            .filter { outgoingConnections(it).contains(coords) }
 
 }

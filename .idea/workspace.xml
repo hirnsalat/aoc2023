@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48cadb0-1b08-47dc-8f59-c244b1e8d723" name="Changes" comment="feat: day ten done + bonus">
+    <list default="true" id="f48cadb0-1b08-47dc-8f59-c244b1e8d723" name="Changes" comment="doc: readme!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/hirnsalat/aoc2023/ten/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/hirnsalat/aoc2023/ten/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/hirnsalat/aoc2023/ten/Puzzle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/hirnsalat/aoc2023/ten/Puzzle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/hirnsalat/aoc2023/ten/PuzzleTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/hirnsalat/aoc2023/ten/PuzzleTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="feat: day ten done + bonus" />
+        <option name="rewordedMessage" value="feat: day ten done + bonus" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="068c357c819616e8d86130406f142d5044f83032" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -51,41 +66,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build aoc2023.executor": "Run",
-    "Gradle.PuzzleTest.executor": "Run",
-    "Gradle.PuzzleTest.testCharAt.executor": "Run",
-    "Gradle.PuzzleTest.testConnections.executor": "Run",
-    "Gradle.PuzzleTest.testExample.executor": "Run",
-    "Gradle.PuzzleTest.testFindStart.executor": "Run",
-    "Gradle.Tests in 'aoc2023.test'.executor": "Run",
-    "Kotlin.MainKt.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/home/alex/IdeaProjects/aoc2023/src/main/kotlin/Main.kt",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build aoc2023.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PuzzleTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PuzzleTest.testCharAt.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PuzzleTest.testConnections.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PuzzleTest.testExample.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PuzzleTest.testFindStart.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'aoc2023.test'.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/alex/IdeaProjects/aoc2023/src/main/kotlin/Main.kt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -225,7 +240,7 @@
       <updated>1702224163150</updated>
       <workItem from="1702224164776" duration="368000" />
       <workItem from="1702225043523" duration="1092000" />
-      <workItem from="1702226149988" duration="10076000" />
+      <workItem from="1702226149988" duration="14999000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit: idea stuff">
       <option name="closed" value="true" />
@@ -251,18 +266,46 @@
       <option name="project" value="LOCAL" />
       <updated>1702236346893</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: day ten done + bonus">
+      <option name="closed" value="true" />
+      <created>1702236432336</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702236432336</updated>
+    </task>
+    <task id="LOCAL-00005" summary="doc: readme!">
+      <option name="closed" value="true" />
+      <created>1702236937656</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702236937656</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit: idea stuff" />
     <MESSAGE value="feat: day ten part 1 mostly done" />
     <MESSAGE value="feat: day ten done + bonus" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: day ten done + bonus" />
+    <MESSAGE value="doc: readme!" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc: readme!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
