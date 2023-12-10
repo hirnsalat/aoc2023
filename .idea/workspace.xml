@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f48cadb0-1b08-47dc-8f59-c244b1e8d723" name="Changes" comment="initial commit: idea stuff">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/hirnsalat/aoc2023/ten/Puzzle.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/hirnsalat/aoc2023/ten/PuzzleTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="f48cadb0-1b08-47dc-8f59-c244b1e8d723" name="Changes" comment="feat: day ten done + bonus">
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/hirnsalat/aoc2023/ten/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/hirnsalat/aoc2023/ten/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/hirnsalat/aoc2023/ten/Puzzle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/hirnsalat/aoc2023/ten/Puzzle.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +18,22 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -34,19 +44,22 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2ZMFhLe5OmfEp2SO55ZqhkepjWC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build aoc2023.executor": "Run",
     "Gradle.PuzzleTest.executor": "Run",
     "Gradle.PuzzleTest.testCharAt.executor": "Run",
     "Gradle.PuzzleTest.testConnections.executor": "Run",
-    "Gradle.PuzzleTest.testExample.executor": "Debug",
+    "Gradle.PuzzleTest.testExample.executor": "Run",
     "Gradle.PuzzleTest.testFindStart.executor": "Run",
     "Gradle.Tests in 'aoc2023.test'.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
@@ -66,6 +79,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/home/alex/IdeaProjects/aoc2023/src/main/kotlin/Main.kt",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "inlay.hints",
     "vue.rearranger.settings.migration": "true"
   }
@@ -78,7 +94,7 @@
       <recent name="hirnsalat.aoc2023.ten" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PuzzleTest.testExample">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="PuzzleTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -93,30 +109,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;hirnsalat.aoc2023.ten.PuzzleTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PuzzleTest.testCharAt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;hirnsalat.aoc2023.ten.PuzzleTest.testCharAt&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,13 +191,20 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hirnsalat.hirnsalat.aoc2023.ten.MainKt" />
+      <module name="aoc2023.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PuzzleTest.testExample" />
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.PuzzleTest" />
+        <item itemvalue="Gradle.PuzzleTest.testExample" />
         <item itemvalue="Gradle.PuzzleTest.testConnections" />
         <item itemvalue="Gradle.PuzzleTest.testFindStart" />
-        <item itemvalue="Gradle.PuzzleTest.testCharAt" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +225,7 @@
       <updated>1702224163150</updated>
       <workItem from="1702224164776" duration="368000" />
       <workItem from="1702225043523" duration="1092000" />
-      <workItem from="1702226149988" duration="2920000" />
+      <workItem from="1702226149988" duration="10076000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit: idea stuff">
       <option name="closed" value="true" />
@@ -236,15 +235,34 @@
       <option name="project" value="LOCAL" />
       <updated>1702225078084</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: day ten part 1 mostly done">
+      <option name="closed" value="true" />
+      <created>1702229250802</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702229250802</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: day ten done + bonus">
+      <option name="closed" value="true" />
+      <created>1702236346893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702236346893</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit: idea stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit: idea stuff" />
+    <MESSAGE value="feat: day ten part 1 mostly done" />
+    <MESSAGE value="feat: day ten done + bonus" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: day ten done + bonus" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
